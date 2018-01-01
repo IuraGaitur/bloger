@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{% block 'list'%}
+	<div class="logo">
+		<h2 class="black">Archive</h2>
+		<span class="slogan">
+			<span>Because Why Not</span>
+		</span>
+	</div>
+	<div class="blog-list">
+		<div class="row">
+			{% for item in articles %}
+			    <div class="column">
+					<div class="article-preview">
+						<img src="{{item.small_image}}">
+						<p>Lifestyle</p>
+						<h4><a href="article/{{item.id}}">{{item.title}}</a></h4>
+					</div>
+				</div>
+			    {% if forloop.counter|divisibleby:3 %}
+			</div>
+			<div class="row">
+			    {% endif %}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
+<!-- End of Blog List -->

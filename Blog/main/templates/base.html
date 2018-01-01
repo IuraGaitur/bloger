@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MalinA Blog</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{% static "/css/style.css"  %}">
+</head>
+<body>
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="column column-60">
+					<nav class="menu">
+						<ul>
+							<li>
+								<a href="/">Main</a>
+							</li>
+							<li>
+								<a href="/archives">Archives</a>
+							</li>
+							<li>
+								<a href="/about">About</a>
+							</li>
+							<li>
+								<a href="/contacts">Contact</a>
+							</li> 	
+						</ul>
+					</nav>
+				</div>
+				<div class="column column-40">
+					<nav class="socials">
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End of Header -->
+
+	<!-- Logo -->
+	{% block 'logo' %}
+	{% endblock %}
+	<!-- End of Logo -->
+	
+	<div class="container">
+
+		<!-- Hero -->
+		{% block 'hero'%}
+		{% endblock %}
+		<!-- End of Hero -->
+		
+		<!-- Blog List -->
+		{% block 'list'%}
+		{% endblock %}
+		<!-- End of Blog List -->
+
+		<!-- About -->
+		
+		{% block 'about'%}
+		{% endblock %}
+
+		<!-- End of About -->
+	</div>
+
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-top">
+				<div class="row">
+					<div class="column">
+						<nav class="socials socials-footer">
+						</nav>
+					</div>
+					<div class="column">
+						<div class="logo logo-footer">
+							<a href="#">
+								Emisferus <span>Blog</span>
+							</a>
+							<span class="slogan">
+								<span>Because Why Not!</span>
+							</span>
+						</div>
+					</div>
+					<div class="column">
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p class="footer-copyright">
+					2017 &copy;Paxra. Trying all rights reserved.
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- End of Footer -->
+</body>
+</html>

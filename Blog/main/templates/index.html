@@ -1,0 +1,59 @@
+{% extends 'base.html' %} 
+	<!-- End of Header -->
+
+	<!-- Logo -->
+	{% block 'logo'%}
+	<div class="logo">
+		<a href="index.html">
+			Emisferus <span>Blog</span>
+		</a>
+		<span class="slogan">
+			<span>Because Why Not</span>
+		</span>
+	</div>
+	{% endblock %}
+	<!-- End of Logo -->
+	
+
+	<!-- Hero -->
+	{% block 'hero'%}
+	<div class="hero">
+		<a href="article/{{firstArticle.id}}" class="hero-link">
+			<img src="{{firstArticle.big_image}}">
+			<div class="hero-meta">
+				<p class="hero-category">
+					{{firstArticle.category}}
+				</p>
+				<h3 class="hero-title">{{firstArticle.title}}</h3>
+				<p class="hero-date">
+					{{firstArticle.date}}
+				</p>
+			</div>
+		</a>
+	</div>
+	{% endblock %}
+	<!-- End of Hero -->
+	
+	<!-- Blog List -->
+	{% block 'list'%}
+	<div class="blog-list">
+		<div class="row">
+			{% for item in articles %}
+			    <div class="column">
+					<div class="article-preview">
+						<img src="{{item.small_image}}">
+						<p>{{item.category}}</p>
+				
+						<h4><a href="article/{{item.id}}">{{item.title}}</a></h4>
+
+					</div>
+				</div>
+			    {% if forloop.counter|divisibleby:3 %}
+			</div>
+			<div class="row">
+			    {% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	{% endblock %}
+	<!-- End of Blog List -->

@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+
+{% block 'about'%}
+
+		<!-- Article -->
+		<article class="article">
+			<header class="article-meta">
+				<p class="article-category">{{article.category}}</p>
+				<h1 class="article-title">{{article.title}}</h1>
+				<p class="article-date">{{article.create_date}}</p>
+			</header>
+			<div class="article-content">
+				<img src="{{article.big_image}}" class="article-hero">
+				<p>{{article.text|safe}}</p>
+			</div>
+		</article>
+		<!-- End of Article -->
+{% endblock %}
+

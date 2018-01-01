@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+{% block 'about'%}
+	<div class="about">
+		<div class="row">
+			<div class="column column-50">
+				<div class="about-image">
+					<img src="{{info.image}}">
+				</div>
+			</div>
+			<div class="column column-50">
+				<div class="about-wrapper">
+					<h4>Contacts</h4>
+					<p class="about-description">
+						{{info.text|safe}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

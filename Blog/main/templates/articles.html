@@ -1,0 +1,11 @@
+<p>Articolele mele </p>
+<ul>
+	{%for article in articles%}
+		<div style="border:1px solid black">
+			<p>{{article.title}}</p>
+			<p>{{article.text}}</p>
+
+		</div>
+
+	{% endfor %}
+</ul>
